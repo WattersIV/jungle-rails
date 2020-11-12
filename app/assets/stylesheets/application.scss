@@ -15,3 +15,21 @@ body {
 form.button_to {
   display: inline;
 }
+
+
+nav.navbar {
+  display: flex;
+
+  div.container {
+    width: 100%;
+    display: flex; 
+    
+    .name {
+      color: blue; 
+      display: flex;
+  
+    }
+  }
+
+
+}
