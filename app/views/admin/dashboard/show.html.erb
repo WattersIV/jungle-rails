@@ -7,7 +7,7 @@
     <th scope='col'> Number of Categories </th> 
   </tr> 
   <tr> 
-    <td> <%= @unique_inventory %> </td> 
-    <td> <%= @category_count %> </td> 
+    <td> <%= link_to @unique_inventory, [:admin, :products] %> </td> 
+    <td> <%= link_to @category_count, [:admin, :products] %> </td> 
   </tr> 
 </table 
