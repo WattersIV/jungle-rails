@@ -1,7 +1,11 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id]) 
+    @order_summary = LineItem.where(order_id: params[:id]) 
+    cart_items = [] 
+    @order_summary.each { |item| cart_items.push item.product_id} 
+    @items = Product.where(id: cart_items)
   end
 
   def create

@@ -4,9 +4,17 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+ 
+ 
+  <%= render partial: "items" %>
+
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  </div>
+    <h4>Thank you for your order!</h4> 
+    <h4> Subtotal:<%= humanized_money_with_symbol @order.total_cents / 100 %></h4>  
+    <h4> Email: <%= @order.email %></h4>
+  </div> 
+
+  </div> 
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
